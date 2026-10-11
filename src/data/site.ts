@@ -13,9 +13,9 @@ export const siteConfig: SiteConfig = {
 
   description: "Eritme Atölyesi: 3D tasarım ve yeni nesil üretim. İşlevsel parçalar, özel üretimler ve 3D modeller.",
 
-  // TODO: put the original logo file into /public (e.g. "/logo.png") and set the path here.
-  // While empty, a text logo is shown.
-  logo: "",
+  // Logo file inside /public (150x150 px; a larger original would look sharper on big or high-density screens).
+  // Set to "" to fall back to a text logo.
+  logo: "/logo.png",
 
   // TODO: replace with the real story of the workshop. Each item renders as one paragraph.
   about: [

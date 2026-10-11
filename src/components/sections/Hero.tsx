@@ -26,7 +26,7 @@ export function Hero() {
       <Container className="relative grid items-center gap-12 md:grid-cols-[1.1fr_1fr]">
         <div>
           <div className="mb-6">
-            <BrandLogo className="h-20 w-20" />
+            <BrandLogo className="h-24 w-24" showName={false} />
           </div>
           <p className="text-brand text-sm font-semibold tracking-widest uppercase">{siteConfig.subtitle}</p>
           <h1 className="text-title mt-3 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
