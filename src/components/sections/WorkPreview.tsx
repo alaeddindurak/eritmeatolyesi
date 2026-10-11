@@ -22,7 +22,14 @@ export function WorkPreview({
   return (
     <div className="bg-chip relative aspect-square w-full overflow-hidden">
       {cover ? (
-        <Image src={withBasePath(cover)} alt={work.title} fill sizes={sizes} className="object-cover" />
+        <>
+          <Image src={withBasePath(cover)} alt={work.title} fill sizes={sizes} className="object-cover" />
+          {work.imageKind === "render" ? (
+            <span className="absolute bottom-3 left-3 rounded-full bg-black/60 px-3 py-1 text-xs font-medium text-white backdrop-blur">
+              3D önizleme
+            </span>
+          ) : null}
+        </>
       ) : (
         <div className="text-brand flex h-full w-full items-center justify-center bg-linear-to-br from-[var(--color-brand-soft)] to-[var(--color-chip)]">
           <Box className="h-16 w-16 opacity-70" aria-hidden="true" />

@@ -26,7 +26,8 @@ This applies to **fonts, icons, animations, 3D tools and animation libraries**, 
 | Icons | Instagram glyph in `SocialIcon.tsx` | Own simple line drawing | No brand artwork copied |
 | 3D viewer | `@google/model-viewer` + `three` | Apache-2.0 / MIT | Approved by the owner on 2026-10-12 |
 | Placeholder 3D model | `public/models/placeholder-cube.glb` | Created for this project (a plain cube) | No third-party content. To be replaced by the owner's own models |
-| Brand logo | Not added yet | n/a | A text logo is shown until the owner provides the logo file |
+| Brand logo | `public/logo.png` (the workshop's own logo, provided by the owner) | Owner's own | Also used as the favicon (`src/app/icon.png`) |
+| Third-party design: Taxi Sign | `public/photos/taxi-sign.jpg` (cover render) | Model: CC0 (Public Domain), designer **Tade**, source https://makerworld.com/tr/models/677134-taxi-sign (license read on the page on 2026-10-12) | The image is the render shown on the source page, used with the owner's decision; it is labelled "3D önizleme" and the detail page shows designer, source, license and a rights note. The model file itself is not hosted yet |
 | Animation | None | n/a | Needs approval first |
 
 ## Runtime dependencies (shipped to visitors)

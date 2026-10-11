@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { WorkCredit } from "@/components/sections/WorkCredit";
 import { WorkPreview } from "@/components/sections/WorkPreview";
 import { WorkViewer } from "@/components/sections/WorkViewer";
 import { Badge } from "@/components/ui/Badge";
@@ -77,6 +78,8 @@ export default async function WorkPage(props: PageProps<"/gallery/[slug]">) {
               Instagram&apos;dan Bize Ulaşın
             </Button>
           ) : null}
+
+          {work.credit ? <WorkCredit credit={work.credit} isImageFromSource={work.imageKind === "render"} /> : null}
         </div>
       </div>
 

@@ -15,6 +15,25 @@ export const categoryLabels: Record<WorkCategory, string> = {
  */
 export const works: Work[] = [
   {
+    slug: "taksi-tabelasi",
+    title: "Taksi Tabelası",
+    category: "print",
+    summary: "Sarı ve siyah, klasik taksi çatı tabelası modeli.",
+    description:
+      "Klasik bir taksi çatı tabelası tasarımı. PLA ile basılır; sarı ve siyah iki renkle görseldeki gibi bir sonuç verir. Dekoratif ya da maket amaçlı kullanılabilir.",
+    photos: ["/photos/taxi-sign.jpg"],
+    imageKind: "render",
+    material: "PLA",
+    credit: {
+      designer: "Tade",
+      sourceName: "MakerWorld",
+      sourceUrl: "https://makerworld.com/tr/models/677134-taxi-sign",
+      license: "CC0 (Public Domain)",
+      licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/deed.tr",
+    },
+    featured: true,
+  },
+  {
     slug: "ornek-baski",
     title: "Örnek Baskı (yer tutucu)",
     category: "print",
