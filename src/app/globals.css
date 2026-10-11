@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens. The brand is dark with a neon cyan accent (taken from the logo),
+ * so DARK is the default theme and the light theme overrides the same names below.
+ * Every color, font and radius lives here, so a new design only needs to change this file.
+ */
+@theme {
+  /* Brand */
+  --color-brand: #22c3f5; /* accent: buttons, links, highlights */
+  --color-brand-hover: #5fd6f8; /* hover state of brand buttons */
+  --color-brand-soft: #0c2a3a; /* tinted background behind icons and badges */
+  --color-brand-ink: #7fdcfb; /* text drawn on top of brand-soft */
+  --color-on-brand: #04111f; /* text drawn on top of brand */
+
+  /* Neutrals */
+  --color-surface: #060b14; /* page background */
+  --color-card: #0d1626;
+  --color-line: #1c2a44; /* borders and dividers */
+  --color-ink: #e6edf7; /* body text */
+  --color-title: #f4f8ff; /* headings */
+  --color-muted: #8fa3c0; /* secondary text */
+  --color-chip: #14213a; /* neutral badge background */
+  --color-footer: #03060c; /* footer background (dark in both themes) */
+
+  /* Fonts (the CSS variable is provided by next/font in layout.tsx) */
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+
+  /* Shape */
+  --radius-card: 1rem;
+}
+
+/* Light theme: switched on by <html data-theme="light"> (see src/lib/theme.ts). */
+:root[data-theme="light"] {
+  --color-brand: #0877a8;
+  --color-brand-hover: #065f85;
+  --color-brand-soft: #e1f4fc;
+  --color-brand-ink: #065f85;
+  --color-on-brand: #ffffff;
+
+  --color-surface: #f4f8fc;
+  --color-card: #ffffff;
+  --color-line: #d5e1ee;
+  --color-ink: #0f1b2d;
+  --color-title: #07111f;
+  --color-muted: #4a5b73;
+  --color-chip: #e8eff7;
+
+  color-scheme: light;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+@layer base {
+  html {
+    /* Smooth in-page scrolling; respects the user's reduced-motion setting below. */
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+
+  /* Visible keyboard focus for every interactive element. */
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
